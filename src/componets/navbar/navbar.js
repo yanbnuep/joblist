@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {Menu, Row, Col} from 'antd';
 import logo from '../../assets/nxlogo170_48.png';
-
+import style from './navbar.css';
 class Navbar extends Component {
     render() {
         return (
             <Row>
                 <Col xs={24} sm={24} md={6} lg={5} xl={4}>
-                    <a href="/" id="logo">
+                    <a href="/" id="logo" className={"logo"} style={style.logo}>
                         <img alt="logo" src={logo}/>
                     </a>
                 </Col>
