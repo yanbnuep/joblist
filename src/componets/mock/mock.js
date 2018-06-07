@@ -9,4 +9,12 @@ const data = Mock.mock("localhost",{
     }]
 });
 
+const detail = Mock.mock("localhost/detail",{
+    "detail": {
+        "title": 'L_' + '@string("lower", 14, 19)',
+        "last_run": '@Date',
+
+    }
+});
+
 export default data;

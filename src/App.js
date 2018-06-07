@@ -1,34 +1,30 @@
 import React, {Component} from 'react';
 import Index from './pages/index';
 import './App.css';
-import $ from 'jquery';
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import Header from './componets/navbar/navbar';
+import DetailView from './pages/detail';
+
 require('./componets/mock/mock');
 
 class App extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-            list: []
-        };
+        this.state = {};
     }
 
-    componentDidMount() {
-        $.ajax({
-            url: "localhost",
-            dataType: 'json'
-        }).done(function(data){
-            this.setState({
-                list: data['list']
-            });
-
-        }.bind(this));
-    }
 
     render() {
         return (
             <div className="App">
-                <Index list={this.state.list}/>
+                <Header/>
+                <Router>
+                    <div>
+                        <Route exact path="/" component={Index}/>
+                        <Route exact path="/detail/:id" component={DetailView}/>
+                    </div>
+                </Router>
             </div>
         );
     }

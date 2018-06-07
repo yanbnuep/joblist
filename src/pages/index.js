@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import Navbar from '../componets/navbar/navbar';
 import Joblist from '../componets/joblist/joblist';
+import $ from "jquery";
+import {Link} from 'react-router-dom'
 
 const columns  = [{
     title: 'Job Title',
@@ -16,11 +17,11 @@ const columns  = [{
     title: 'State',
     dataIndex: 'state',
     width: 200,
-    key: 'state',
+    key: 'key',
     render: (text, record)=> (
-        <a href="javascript:;">
+        <Link to={`detail/` + record.key}>
             {record.state? "Done" : "Failed"}
-        </a>
+        </Link>
     )
 }];
 
@@ -29,13 +30,24 @@ class Index extends Component {
         super(props);
         this.state = {
             controller_visible: false,
+            list: []
         }
+    }
+    componentDidMount() {
+        $.ajax({
+            url: "localhost",
+            dataType: 'json'
+        }).done(function(data){
+            this.setState({
+                list: data['list']
+            });
+
+        }.bind(this));
     }
     render() {
         return (
             <div>
-                <Navbar/>
-                <Joblist columns={columns} dataSource={this.props.list}/>
+                <Joblist columns={columns} dataSource={this.state.list}/>
             </div>
         );
     }
