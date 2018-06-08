@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table,  Modal, Button } from 'antd';
+import { Table } from 'antd';
 
 class Joblist extends React.Component {
     constructor(props){
@@ -14,8 +14,5 @@ class Joblist extends React.Component {
     };
 }
 
-function jobControl(props){
-
-}
 
 export default Joblist;

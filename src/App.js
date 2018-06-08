@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Index from './pages/index';
 import './App.css';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import Header from './componets/navbar/navbar';
 import DetailView from './pages/detail';
 

@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
-
+import React from 'react';
+import Update_Form from  '../componets/update_form/update_form';
 class DetailView extends React.Component {
     render(){
         return (
             <div>
-                {this.props.match.params.id}
+                <Update_Form/>
             </div>
         )
     }
