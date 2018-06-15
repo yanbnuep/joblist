@@ -4,8 +4,10 @@
   "private": true,
   "dependencies": {
     "antd": "^3.6.1",
+    "axios": "^0.18.0",
     "jquery": "^3.3.1",
     "mockjs": "^1.0.1-beta3",
+    "qs": "^6.5.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-router-dom": "^4.3.1",
@@ -17,8 +19,10 @@
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   },
+
   "devDependencies": {
     "babel-plugin-import": "^1.7.0",
     "react-app-rewired": "^1.5.2"
   }
+
 }

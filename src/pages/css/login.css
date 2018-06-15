@@ -1,0 +1,10 @@
+.nx-login {
+
+}
+
+
+@media screen and (min-width: 1024px) {
+    .nx-login {
+        width: 1000px;
+    }
+}
