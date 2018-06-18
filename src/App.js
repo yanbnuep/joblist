@@ -6,7 +6,6 @@ import Header from './componets/navbar/navbar';
 import DetailView from './pages/detail';
 import Login from './pages/login';
 
-require('./componets/mock/mock');
 
 class App extends Component {
 

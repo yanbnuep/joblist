@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import Joblist from '../componets/joblist/joblist';
 import $ from "jquery";
-import {Link} from 'react-router-dom'
-
+import {Link} from 'react-router-dom';
+import {data} from '../componets/mock/mock';
 const columns  = [{
     title: 'Job Title',
     dataIndex: 'Job_title',
