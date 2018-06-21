@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Joblist from '../componets/joblist/joblist';
-import $ from "jquery";
+import axios from  'axios';
 import {Link} from 'react-router-dom';
 import {data} from '../componets/mock/mock';
 const columns  = [{
@@ -34,10 +34,7 @@ class Index extends Component {
         }
     }
     componentDidMount() {
-        $.ajax({
-            url: "localhost",
-            dataType: 'json'
-        }).done(function(data){
+        axios.get('localhost').then(function(data){
             this.setState({
                 list: data['list']
             });
