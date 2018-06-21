@@ -19,15 +19,13 @@ class Login extends React.Component {
 
     handleChange(e) {
         const {name, value} = e.target;
-        console.log(name, value);
-        this.setState = ({[name]: value});
+        this.setState({ [name]: value});
     }
 
-    handleSubmit = function(e){
+    handleSubmit(e){
         e.preventDefault();
         const { username, password } = this.state;
         const {dispatch} = this.props;
-        console.log(username , password);
         if(username && password){
             dispatch(userActions.login(username, password));
         }
