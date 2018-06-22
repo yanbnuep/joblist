@@ -5,6 +5,7 @@
   "dependencies": {
     "antd": "^3.6.1",
     "axios": "^0.18.0",
+    "history": "^4.7.2",
     "jquery": "^3.3.1",
     "mockjs": "^1.0.1-beta3",
     "qs": "^6.5.2",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.7.0",
+    "jsonp": "^0.2.1",
     "react-app-rewired": "^1.5.2"
   }
 }
